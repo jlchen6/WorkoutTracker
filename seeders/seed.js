@@ -7,13 +7,18 @@ mongoose.connect("mongodb://localhost/workout", {
 });
 
 const workoutDay1 = {
-  day: new Date().setDate(new Date().getDate() - 1)
+  day: new Date().setDate(new Date().getDate() - 1),
+  totalDuration: 75
 };
 const workoutDay2 = {
-  day: new Date().setDate(new Date().getDate() - 2)
+  day: new Date().setDate(new Date().getDate() - 2),
+  totalDuration: 75
+
 };
 const workoutDay3 = {
-  day: new Date().setDate(new Date().getDate() - 3)
+  day: new Date().setDate(new Date().getDate() - 3),
+  totalDuration: 75
+
 };
 
 const exercisesDay1 = [
@@ -34,7 +39,7 @@ const exercisesDay1 = [
     sets: 4
   },
   {
-    type: "resistance",
+    type: "cardio",
     name: "Bench",
     duration: 30,
     distance: 2
@@ -59,7 +64,7 @@ const exercisesDay2 = [
     sets: 4
   },
   {
-    type: "resistance",
+    type: "cardio",
     name: "Bench",
     duration: 30,
     distance: 2
@@ -84,7 +89,7 @@ const exercisesDay3 = [
     sets: 4
   },
   {
-    type: "resistance",
+    type: "cardio",
     name: "Bench",
     duration: 30,
     distance: 2
